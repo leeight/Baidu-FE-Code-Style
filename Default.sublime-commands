@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fecs_lint",
+    "caption": "Baidu FE Code Style Linter",
+    "command": "fecs_lint"
+  },
+  {
+    "id": "fecs_format",
+    "caption": "Baidu FE Code Style Formatter",
+    "command": "fecs_format"
+  }
+]

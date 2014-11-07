@@ -1,0 +1,6 @@
+{
+	"env": {
+		"fecs_bin": "/usr/local/bin/fecs",
+		"node_bin": "/usr/local/bin/node"
+	}
+}
