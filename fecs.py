@@ -166,7 +166,7 @@ def watch():
   view = sublime.active_window().active_view()
   if view is not None:
     fn = view.file_name()
-    if fn.lower().endswith('.js'):
+    if fn and fn.lower().endswith('.js'):
       fn = os.path.abspath(fn)
       fr = ref(fn, False)
       if fr is not None:
