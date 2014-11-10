@@ -18,3 +18,19 @@ Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发�
 
 输入`Baidu FE Code Style`来进行查询，查询之后安装即可
 
+### 配置
+
+安装完毕之后，因为 Sublime 无法读取系统的`PATH`环境变量，所以初次使用需要配置一下相关的路径：
+
+![fecs-config.png](http://ecma.bdimg.com/adtest/fecs-config-cf2d1959.png)
+
+主要配置的内容如下（按照自己系统上的路径填写即可）：
+
+```javascript
+{
+  "env": {
+    "fecs_bin": "/usr/local/bin/fecs",
+    "node_bin": "/usr/local/bin/node"
+  }
+}
+```
