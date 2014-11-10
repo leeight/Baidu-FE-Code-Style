@@ -43,7 +43,7 @@ Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发�
 
 ![fecs-show.png](http://ecma.bdimg.com/adtest/fecs-show-ba52dc3f.png)
 
-点击圆点之后，具体的 warning 信息会显示在底部的状态栏
+点击圆点之后，具体的 warning 信息会显示在底部的状态栏，如果错误信息太多，状态栏显示不全的话，可以通过`Ctrl + ~`调用 Sublime Text 的 Console，里面有更详细的信息。
 
 ## WebStorm
 
