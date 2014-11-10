@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+/**
+ * @file jscs.js ~ 2014/11/10 17:13:52
+ * @author leeight(liyubei@baidu.com)
+ **/
+// webstorm 调用 bin/jscs 的时候，传递的参数是
+// ./jscs -v -r checkstyle --preset google -c \
+//     /private/var/folders/py/v52h5mdn4bj5clh12mxmn2240000gn/T/jscs_empty0.jscsrc
+// 我们只需要取最后一个即可
+var fs = require('fs');
+var args = process.argv;
+if (!args.length || !fs.existsSync(args[args.length - 1])) {
+    process.exit(0);
+}
+
+// fecs --silent --reporter=baidu --format=checkstyle \
+//    /Users/leeight/hd/local/WebstormProjects/hello-world/js/plugins.js
+var file = args[args.length - 1];
+
+var spawn = process.env.comspec ? function(command, args, options) {
+    var spawn = require('child_process').spawn;
+    return spawn(
+        process.env.comspec,
+        ['/c', command].concat(args),
+        options
+    );
+} : function(command, args, options) {
+    var spawn = require('child_process').spawn;
+    return spawn(command, args, options);
+};
+
+var fecs = spawn('fecs',
+    ['--silent', '--reporter=baidu', '--format=checkstyle', file],
+    {stdio: 'inherit'});
+fecs.on('close', function() {
+    // ignore
+});
+
+
+
+
+
+
+
+
+/* vim: set ts=4 sw=4 sts=4 tw=120: */
