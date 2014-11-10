@@ -59,4 +59,4 @@ WebStorm默认集成了`jscs`的插件，我们只需要修改一下配置即可
 
 配置之后就可以直接使用了，保存之后就会自动验证，效果如下：
 
-![webstorm-result.png](http://ecma.bdimg.com/adtest/webstorm-result-00c0c194.png)
+![webstorm-result.png](http://ecma.bdimg.com/adtest/webstorm-result-c7aab9a3.png)
