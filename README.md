@@ -1,6 +1,8 @@
-### Baidu-FE-Code-Style
+## Baidu-FE-Code-Style
 
-Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发的 Sublime 2/3 插件，目的是方便的验证所写的代码是否符合 [百度前端编码规范](https://github.com/ecomfe/spec) 的要求
+Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发的 Sublime Text 2/3 和 WebStorm 插件，目的是方便的验证所写的代码是否符合 [百度前端编码规范](https://github.com/ecomfe/spec) 的要求
+
+## Sublime Text 2/3
 
 ### 安装
 
@@ -42,3 +44,19 @@ Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发�
 ![fecs-show.png](http://ecma.bdimg.com/adtest/fecs-show-ba52dc3f.png)
 
 点击圆点之后，具体的 warning 信息会显示在底部的状态栏
+
+## WebStorm
+
+### 安装
+
+WebStorm默认集成了`jscs`的插件，我们只需要修改一下配置即可使用，首先需要通过`npm i -g fecs`来确保系统中已经安装了`fecs`，然后修改`jscs`的配置：
+
+![webstorm-config.png](http://ecma.bdimg.com/adtest/webstorm-config-1bb84ea7.png)
+
+主要是修改`JSCS Package`的路径。另外`Configuration file`和`Code style preset`可以随便选择，我们是用不到的（直接忽略了）
+
+### 使用
+
+配置之后就可以直接使用了，保存之后就会自动验证，效果如下：
+
+![webstorm-result.png](http://ecma.bdimg.com/adtest/webstorm-result-00c0c194.png)
