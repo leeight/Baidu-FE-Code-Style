@@ -40,8 +40,12 @@ def highlight_regions(fr):
   regions = []
   regions0 = []
   domain0 = DOMAIN+'-zero'
+
   if len(fr.errors) > 0:
     print '\n%s' % fr.file
+  else:
+    print '\n%s\nCongratulations! Everything is OK!' % fr.file
+
   for r in fr.errors:
     row = r.get('line') or 0
     col = r.get('column') or 0
