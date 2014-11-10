@@ -30,18 +30,22 @@ if st2:
   plugin_loaded()
 
 class FileRef(object):
-  def __init__(self, view):
+  def __init__(self, view, file):
     self.view = view
     self.state = 0
+    self.file = file
     self.errors = []
 
 def highlight_regions(fr):
   regions = []
   regions0 = []
   domain0 = DOMAIN+'-zero'
+  if len(fr.errors) > 0:
+    print '\n%s' % fr.file
   for r in fr.errors:
     row = r.get('line') or 0
     col = r.get('column') or 0
+    print '%s:%s %s' % (row, col, r.get('message').encode('utf-8'))
     line = fr.view.line(fr.view.text_point(row-1, 0))
     pos = line.begin() + col
     if pos >= line.end():
@@ -197,7 +201,7 @@ def run_lint(view):
     return
   fn = os.path.abspath(fn)
   if fn:
-    file_refs[fn] = FileRef(view)
+    file_refs[fn] = FileRef(view, fn)
     gsq.dispatch(CL_DOMAIN, lambda: do_comp_lint(fn, node_bin, fecs_bin), '')
 
 def run_format(view):
@@ -210,7 +214,7 @@ def run_format(view):
     return
   fn = os.path.abspath(fn)
   if fn:
-    file_refs[fn] = FileRef(view)
+    file_refs[fn] = FileRef(view, fn)
     content = view.substr(sublime.Region(0, view.size()))
     gsq.dispatch(CL_DOMAIN_FORMAT, lambda: do_comp_format(fn, content, node_bin, fecs_bin), '')
 
