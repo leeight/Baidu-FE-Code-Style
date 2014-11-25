@@ -42,14 +42,14 @@ def highlight_regions(fr):
   domain0 = DOMAIN+'-zero'
 
   if len(fr.errors) > 0:
-    print '\n%s' % fr.file
+    print('\n%s' % fr.file)
   else:
-    print '\n%s\nCongratulations! Everything is OK!' % fr.file
+    print('\n%s\nCongratulations! Everything is OK!' % fr.file)
 
   for r in fr.errors:
     row = r.get('line') or 0
     col = r.get('column') or 0
-    print '%s:%s %s' % (row, col, r.get('message').encode('utf-8'))
+    print('%s:%s %s' % (row, col, r.get('message').encode('utf-8')))
     line = fr.view.line(fr.view.text_point(row-1, 0))
     pos = line.begin() + col
     if pos >= line.end():
