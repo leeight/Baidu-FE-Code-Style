@@ -16,8 +16,6 @@ Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发�
 
 #### 通过Package Control安装
 
-> 注意：现在还不行，还需要等待发布
-
 输入`Baidu FE Code Style`来进行查询，查询之后安装即可
 
 ### 配置
