@@ -8,7 +8,7 @@ Baidu FE Code Style 是一个基于[fecs](https://github.com/ecomfe/fecs)开发�
 
 #### 手工安装
 
-1. git checkout https://github.com/leeight/Baidu-FE-Code-Style.git 'Baidu FE Code Style'
+1. git clone https://github.com/leeight/Baidu-FE-Code-Style.git
 2. 把 'Baidu FE Code Style' 目录放到
    1. OS X: ~/Library/Application Support/Sublime Text 2/Packages
    2. Windows: %APPDATA%\Sublime Text 2\Packages
